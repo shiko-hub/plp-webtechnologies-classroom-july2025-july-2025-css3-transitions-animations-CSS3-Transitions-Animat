@@ -1,0 +1,41 @@
+/* Part 1: Transitions & Keyframes */
+button {
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Animated box */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  margin-top: 20px;
+  opacity: 0;
+}
+.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  padding: 20px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  animation: fadeIn 0.5s ease-in;
+}
+.modal.show {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
